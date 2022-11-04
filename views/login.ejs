@@ -1,14 +1,154 @@
-﻿<h1>Login</h1>
-<% if (messages.error) { %> <%= messages.error %> <% } %>
-<form class="form" action="/login" method="POST">
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
+﻿<div
+  style="
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: sans-serif;
+  "
+>
+  <div
+    style="
+      display: flex;
+      width: 50%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+    "
+  >
+    <img
+      style="
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      "
+      src="https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      alt=""
+    />
   </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required />
+  <div
+    style="
+      display: flex;
+      width: 50%;
+      height: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      border-radius: 10px;
+    "
+  >
+    <h1>Login</h1>
+
+    <% if (messages.error) { %> <%= messages.error %> <% } %>
+
+    <form
+      style="
+        display: flex;
+        width: 50%;
+        height: 70%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+      "
+      class="form"
+      action="/login"
+      method="POST"
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+          height: 11%;
+          flex-direction: column;
+          position: relative;
+          gap: 10px;
+        "
+      >
+        <label for="email">Email</label>
+        <input
+          style="
+            width: 100%;
+            height: 70px;
+            border: 1px solid #000941;
+            outline: none;
+            border-radius: 5px;
+            padding: 10px;
+            max-height: 80px;
+          "
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Enter your Email"
+        />
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+          height: 11%;
+          flex-direction: column;
+          position: relative;
+          gap: 10px;
+        "
+      >
+        <label for="password">Password</label>
+        <input
+          style="
+            width: 100%;
+            height: 70px;
+            border: 1px solid #000941;
+            outline: none;
+            border-radius: 5px;
+            padding: 10px;
+            max-height: 80px;
+          "
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder="Enter your Password"
+        />
+      </div>
+      <button
+        style="
+          width: 100%;
+          height: max-content;
+          padding: 10px 20px;
+          border: none;
+          outline: none;
+          background-color: #000941;
+          color: #fff;
+          font-size: 18px;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+        type="submit"
+      >
+        Login
+      </button>
+      <a href="/register">Create your account! Register</a>
+    </form>
   </div>
-  <button type="submit">Login</button>
-</form>
-<a href="/register">Register</a>
+</div>
