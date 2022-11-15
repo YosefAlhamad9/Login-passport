@@ -16,7 +16,8 @@
     "express-session": "^1.17.2",
     "method-override": "^3.0.0",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
